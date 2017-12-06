@@ -1,0 +1,18 @@
+<div>
+  # of attacks <input type="text" size="3" id="attack"><br><br>
+  hitting on <input type="text" size="3" id="hitChance"><br><br>
+  enemy defense <input type="text" size="3" id="defense"><br><br>
+  <input type="submit" value="Calculate" onclick="calc()">
+  <p id="result"></p>
+</div>
+
+<script>
+  function calc() {
+    var attack = document.getElementById("attack").value;
+    var hitChance = document.getElementById("hitChance").value;
+    var defense = document.getElementById("defense").value;
+
+    var result = (attack * ((7 - hitChance) / 6)) * ((7 - defense) / 6);
+    document.getElementById("result").innerHTML = result;
+  }
+</script>
