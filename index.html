@@ -13,6 +13,6 @@
     var defense = document.getElementById("defense").value;
 
     var result = (attack * ((7 - hitChance) / 6)) * ((7 - defense) / 6);
-    document.getElementById("result").innerHTML = "wounds - " + result;
+    document.getElementById("result").innerHTML = "wounds - " + result.toFixed(2);
   }
 </script>
